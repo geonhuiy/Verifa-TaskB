@@ -13,3 +13,9 @@ Config files under jenkins/ was used. The Jenkins Kubernetes namespace was creat
 3. Create and deploy the JCasC Config Map  
 `kubectl create configmap jenkins-casc-config --from-file jenkins/jenkins-casc-config.yaml --dry-run -o yaml > jenkins/jenkins-casc-config-configmap.yaml`  
 `kubectl apply -f jenkins/jenkins-casc-config-configmap.yaml --namespace jenkins`.  
+
+4. Install the Jenkins Helm Chart  
+Since `helm init` and Tiller was removed at Helm v3.0,  
+`stable` repo with `helm repo add stable https://kubernetes-charts.storage.googleapis.com`.  
+Jenkins Helm Chart was installed with `helm install jenkins -f jenkins/jenkins-values.yaml stable/jenkins --namespace jenkins`.  
+The Jenkins instance could be opened at http://192.168.99.104:32000/login
