@@ -5,9 +5,11 @@ Installed [Kubernetes (kubectl command line)](https://kubernetes.io/docs/tasks/t
 ### Steps Taken
 1. Create Minikube Kubernetes cluster  
 `minikube start — vm-driver=virtualbox`  
+
 2. Deploy Jenkins to Minikube Kubernetes cluster  
 Config files under jenkins/ was used. The Jenkins Kubernetes namespace was created with  
-`kubectl apply -f jenkins/jenkins-namespace.yaml`. 
+`kubectl apply -f jenkins/jenkins-namespace.yaml`.  
+
 3. Create and deploy the JCasC Config Map  
 `kubectl create configmap jenkins-casc-config --from-file jenkins/jenkins-casc-config.yaml --dry-run -o yaml > jenkins/jenkins-casc-config-configmap.yaml`  
-`kubectl apply -f jenkins/jenkins-casc-config-configmap.yaml --namespace jenkins`  
+`kubectl apply -f jenkins/jenkins-casc-config-configmap.yaml --namespace jenkins`.  
