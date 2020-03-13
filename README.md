@@ -20,4 +20,6 @@ Config files under jenkins/ was used. The Jenkins Kubernetes namespace was creat
 Since `helm init` and Tiller was removed at Helm v3.0,  
 Added `stable` repo with `helm repo add stable https://kubernetes-charts.storage.googleapis.com`.  
 Jenkins Helm Chart was installed with `helm install jenkins -f jenkins/jenkins-values.yaml stable/jenkins --namespace jenkins`.  
-The Jenkins instance could be opened at http://192.168.99.104:32000/login
+The Jenkins instance could be opened at http://192.168.99.104:32000/login.  
+
+The pipeline project pointed at the forked repository was initialized to read and execute from the Jenkinsfile from the root of the project directory. However, the pipeline seems to fail at building and times out upon reaching `git fetch`.  
