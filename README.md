@@ -1,6 +1,6 @@
 # Verifa-TaskB  
 ### Prerequisites
-Installed [Kubernetes (kubectl command line)](https://kubernetes.io/docs/tasks/tools/install-kubectl/) and added PATH via environment variable. Installed [Kubernetes Helm](https://helm.sh/docs/intro/) and [Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/) via [Chocolatey](https://chocolatey.org/). [VirtualBox](https://www.virtualbox.org/) was used as the Virtual Machine provider of choice.  
+Installed [Kubernetes (kubectl command line)](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Installed [Kubernetes Helm](https://helm.sh/docs/intro/) and [Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/) via [Chocolatey](https://chocolatey.org/). [VirtualBox](https://www.virtualbox.org/) was used as the Virtual Machine provider of choice.  
 
 ### Steps Taken
 1. Create Minikube Kubernetes cluster  
@@ -16,6 +16,6 @@ Config files under jenkins/ was used. The Jenkins Kubernetes namespace was creat
 
 4. Install the Jenkins Helm Chart  
 Since `helm init` and Tiller was removed at Helm v3.0,  
-`stable` repo with `helm repo add stable https://kubernetes-charts.storage.googleapis.com`.  
+Added `stable` repo with `helm repo add stable https://kubernetes-charts.storage.googleapis.com`.  
 Jenkins Helm Chart was installed with `helm install jenkins -f jenkins/jenkins-values.yaml stable/jenkins --namespace jenkins`.  
 The Jenkins instance could be opened at http://192.168.99.104:32000/login
