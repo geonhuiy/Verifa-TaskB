@@ -1,4 +1,6 @@
 # Verifa-TaskB  
+Personal VSCode project fork including the Jenkinsfile can be found [here](https://github.com/geonhuiy/vscode).  
+
 ### Prerequisites
 Installed [Kubernetes (kubectl command line)](https://kubernetes.io/docs/tasks/tools/install-kubectl/). Installed [Kubernetes Helm](https://helm.sh/docs/intro/) and [Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/) via [Chocolatey](https://chocolatey.org/). [VirtualBox](https://www.virtualbox.org/) was used as the Virtual Machine provider of choice.  
 
